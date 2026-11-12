@@ -1,361 +1,195 @@
-> [!IMPORTANT]
-> Cada seção tem dois tipos de bloco de apoio, que **devem ser apagados** antes da entrega final — o README entregue deve conter só o texto do grupo:
-> - **💡 (Dica)** — o que escrever nessa seção, com base nas aulas de IHR.
-> - **📄 (Exemplo)** — um exemplo preenchido, de um robô fictício ("Rumo", robô guia da FEI para o FEI Portas Abertas), só para ilustrar o **nível de detalhe e o formato** esperados.
-
-
-# **<Nome do Robô>:** <Aplicação do robô>
-
-Trabalho de Interação Humano-Robô (IHR) apresentado ao Centro Universitário [FEI](https://portal.fei.edu.br/), como parte dos requisitos necessários para aprovação na disciplina de Interação Humano-Robô (IHR) (CCR230) do curso de Engenharia de Robôs, orientado pelo Prof. Dr. [Fagner de Assis Moura Pimentel](https://github.com/fagnerpimentel).
-
-## Componentes do Grupo
-
-> 💡 Adicione os nomes e RAs dos integrantes
-> - Nome - RA
-> - Nome - RA
-> - Nome - RA
-
-## Resumo
-
-> 💡
-> Apresente uma breve descrição do seu robô e sua aplicação (tarefa que ele irá resolver).
-
-<details>
-<summary>📄</summary>
-
-O Rumo é um robô recepcionista para o FEI Portas Abertas. Ele acolhe os visitantes no saguão de entrada, apresenta rapidamente os cursos oferecidos e guia grupos até o laboratório de interesse, reduzindo a fila de espera por monitores humanos nos horários de pico.
-
-</details>
-
-## Introdução
-
-> 💡
-> - Apresente uma contextualização para o problema que o seu robô irá resolver e por quê esse tipo de robô é necessário hoje na sociedade.
-> - Apresente uma breve descrição do seu robô e sua aplicação (tarefa que ele irá resolver).
-> - Em uma única frase, resuma o objetivo do seu robô.
-> - Que tipo de experiência o robô deve proporcionar para os usuários?
-
-<details>
-<summary>📄</summary>
-
-Todo ano a FEI recebe centenas de visitantes no FEI Portas Abertas, mas há poucos monitores voluntários disponíveis nos horários de pico — visitantes ficam perdidos no saguão ou esperando muito tempo por orientação. O Rumo é um robô móvel com tela e um braço apontador que recebe visitantes na portaria, apresenta um menu de destinos (curso, laboratório, auditório) e os guia até lá, verificando se o grupo continua acompanhando.
-
-**Objetivo em uma frase:** ajudar visitantes do FEI Portas Abertas a encontrar, sem depender de um monitor humano, o curso e o laboratório que querem conhecer.
-
-**Experiência desejada:** acolhedora, confiável e levemente lúdica — sem intimidar quem nunca interagiu com um robô antes.
-
-</details>
-
-## Público-Alvo e Stakeholders
-
-> 💡
-> Determine o seu público alvo.
-
-### Stakeholders
-
-> 💡
-> Identifique os **stakeholders** do projeto — todos os envolvidos e afetados pelo robô, mesmo sem interagir diretamente com ele:
-> - **Primários** — usam o robô diretamente.
-> - **Secundários** — têm contato intermitente com o robô ou interagem com ele por meio de um intermediário.
-> - **Terciários** — são afetados pelo robô (positiva ou negativamente) sem necessariamente interagir com ele.
-
-<details>
-<summary>📄</summary>
-
-- **Primários** — visitantes (futuros alunos e famílias) que pedem informações e são guiados pelo robô.
-- **Secundários** — recepcionistas e seguranças da portaria, que cruzam com o robô no saguão e ocasionalmente o auxiliam.
-- **Terciários** — coordenadores de curso, cujo número de inscrições pode ser afetado pela impressão (boa ou ruim) que o robô causa nos visitantes.
-
-</details>
-
-### Personas
-
-> 💡
-> - Descreva as personas que irão interagir com o robô. Deixe claro suas principais características e contextos sociais, econômicos e culturais.
-> - Quais informações sobre o usuário o robô deve saber antes de iniciar a tarefa?
-
-- Persona primária ...
-- Persona secundária ...
-- Outras personas ...
-
-<details>
-<summary>📄</summary>
-
-- **Persona primária — Ana, 17 anos:** aluna do 3º ano do ensino médio, indecisa entre Engenharia de Robôs e Ciência da Computação, visita a FEI pela primeira vez acompanhada da mãe. Não sabe onde fica nenhum laboratório.
-- **Persona secundária — Sr. Carlos, 50 anos:** pai de Ana, mais cético em relação a tecnologia, preocupado com o custo do curso e a empregabilidade; tende a fazer perguntas objetivas e desconfia de recomendações "automáticas".
-
-</details>
-
-### Mapa de empatia
-
-![Mapa de empatia](empatia.png)
-
-> 💡
-> Determine o mapa de empatia[^1] de pelo menos uma persona primária e uma secundária.
-> - O que o usuário vê: aqui estamos falando do ambiente visual em que o usuário se encontra. Ou seja, o que ele efetivamente enxerga, as pessoas e objetos que estão ao seu redor. Isso ajuda a entender o contexto em que o usuário está inserido e as influências visuais que está recebendo.
-> - O que o usuário ouve: neste quadrante, buscamos entender o que o usuário está ouvindo, os sons que o cercam e como eles influenciam suas ações.
-> - O que o usuário diz e faz: aqui consideramos ações e comportamentos que o usuário apresenta durante sua interação com o robô.
-> - O que o usuário pensa e sente: neste quadrante, buscamos entender os pensamentos, sentimentos, emoções e percepções que o usuário tem em relação robô. Quais expectativas o usuário cria sobre o robô? Que tipo de robô mais agrada essa persona?
-> - Dores: quando falamos sobre dores do usuário, estamos fazendo referência a quaisquer obstáculos, necessidades ou frustrações que o usuário possa experimentar ao tentar realizar uma tarefa ou alcançar um objetivo. Isso inclui, por exemplo, problemas de usabilidade, dificuldades de acesso ou outros desafios que podem afetar a experiência do usuário.
-> - Ganhos: nesse caso estamos falando de quaisquer benefícios ou recompensas que o usuário possa experimentar ao utilizar o robô. Isso pode incluir economia de tempo ou facilidade de uso, por exemplo. Que desejos do usuário o robô satisfaz?
-
-<details>
-<summary>📄 (persona: Ana)</summary>
-
-- **Vê:** banners coloridos, estudantes de jaleco, placas de curso, o robô Rumo se movendo pelo saguão.
-- **Ouve:** música ambiente do evento, outros visitantes conversando, um monitor anunciando horários de palestras.
-- **Diz e faz:** pergunta "onde fica o laboratório de robótica?", tira foto do robô, segue meio hesitante quando ele começa a andar.
-- **Pensa e sente:** ansiosa por decidir a faculdade certa, curiosa e um pouco encantada com o robô, insegura se vai dar conta do curso.
-- **Dores:** medo de escolher a faculdade errada; vergonha de fazer perguntas "óbvias" para um humano.
-- **Ganhos:** sente-se acolhida sem julgamento ao perguntar ao robô; economiza tempo achando o laboratório sozinha.
-
-</details>
-
-## Contexto de uso
-
-> 💡
-> - Descreva o ambiente em que o robô interage com os usuários
-> - Qual/quais o(s) contexto(s) sociais, econômicos e culturais existentes neste ambiente?
-> - Quais informações sobre o ambiente o robô deve saber antes de iniciar a tarefa?
-
-<details>
-<summary>📄</summary>
-
-Saguão de entrada e corredores do prédio principal da FEI, durante o FEI Portas Abertas (evento de um único dia, com alta lotação). O ambiente é barulhento e há vários grupos de visitantes circulando ao mesmo tempo, muitos acompanhados de monitores humanos. O robô precisa saber, antes de começar, o mapa dos laboratórios abertos naquele dia e quais estão temporariamente fechados.
-
-</details>
-
-## Jornada do usuário
-
-> 💡
-> - Criar uma narrativa para o o seu robô e o usuário.
-> - Determine o passo a passo que o usuário realiza desde o primeiro até o último encontro com robô na realização da tarefa.
-> - O que está acontecendo com o ambiente quando o robô está interagindo com o usuário?
->   - Descreva o que acontece ou pode acontecer passo a passo
->   - Como a tarefa começa? Como a tarefa evolui? Como a tarefa termina?
-> - Enfatize todos os momentos em que acontece uma interação verbal, não-verbal e espacial.
-
-<details>
-<summary>📄</summary>
-
-1. Ana e o pai entram no saguão e ficam parados olhando ao redor, sem saber para onde ir.
-2. O Rumo percebe o grupo parado (sinal de "perdido") e se aproxima devagar, pela frente, mantendo distância social *(espacial)*.
-3. O robô pergunta "Posso ajudar vocês a encontrar algum curso ou laboratório?" e mostra um menu de ícones na tela *(verbal)*.
-4. Ana toca em "Engenharia de Robôs"; o robô confirma e começa a andar, olhando de tempos em tempos para trás para checar se o grupo o segue *(espacial + não-verbal)*.
-5. No corredor, o robô encontra duas pessoas conversando e contorna sem passar entre elas *(espacial)*.
-6. Ao chegar no laboratório, o robô se vira de frente para o grupo, inclina levemente a "cabeça" e deseja uma boa visita *(não-verbal)*.
-
-</details>
-
-## Análise de concorrência
-
-> 💡
-> - Pesquise robôs existentes atualmente que possam fazer a tarefa deste projeto.
-> - Selecione pelo menos 3 robôs diferentes que podem fazer essa tarefa.
-> - Em relação aos concorrentes, respondam as seguintes perguntas:
->   - Existe plataforma similar que atende o mesmo mercado e funcionalidades? Se sim: Quais os pontos positivos? Quais os pontos negativos?
->   - Existe plataforma diferente quanto ao serviço, mas que atenda esse mercado? Se sim: Quais os pontos positivos? Quais os pontos negativos?
->   - Quais plataformas sua equipe acha mais interessantes? Qual a justificativa?
-
-<details>
-<summary>📄</summary>
-
-- **Totens interativos de informação** (comuns em aeroportos e shoppings) — bons para consultar informação estática, mas não guiam fisicamente o visitante até o destino.
-- **Aplicativo de mapa indoor do campus** — dispensa hardware físico, mas perde o acolhimento social que um robô oferece a um visitante inseguro.
-- **Pepper (SoftBank Robotics)**, usado em recepções comerciais — proposta muito parecida (recepcionar e guiar), mas é caro e não é sob medida para o layout da FEI.
-
-A equipe considera o Pepper a referência mais próxima, mas acredita que um robô mais simples e barato (sem braços articulados) atende igualmente bem ao caso de uso do FEI Portas Abertas.
-
-</details>
-
-## Design do Robô
-
-### Forma, função e affordances
-
-> 💡
-> - Pense nas características de affordances do seu robô. Que tipo de acessibilidades devem ser consideradas dentro do seu projeto?
-> - A aparência e o comportamento do robô **casam com a função**? Que affordances a forma sinaliza (olhos → enxergar, braços → pegar objetos, tela → interagir por toque)?
-> - Discuta o papel das expectativas do usuário no projeto de um robô. Onde faz sentido "**prometer menos e entregar mais**" (underpromise, overdeliver)?
-
-<details>
-<summary>📄</summary>
-
-O Rumo tem uma tela no "peito" (affordance de toque), uma "cabeça" com dois pontos luminosos (olhos) que sinalizam para onde está olhando, e **não** tem braços — o que sinaliza corretamente que ele não manipula objetos, apenas informa e guia. Para "prometer menos, entregar mais", o robô nunca é chamado de "assistente inteligente" nos materiais do evento, apenas de "guia do FEI Portas Abertas", evitando a expectativa de uma conversa livre e aberta.
-
-</details>
-
-### Grau de antropomorfismo
-
-> 💡
-> - O seu robô tem um padrão com mais ou menos características antropomórficas (androide, humanoide, zoomórfico, minimalista, robject)? Marquem um ponto no espectro máquina ↔ humano e justifiquem.
-> - Qual padrão é mais aceito pela sociedade dentro do projeto que você está desenvolvendo?
-> - Como o grupo pretende evitar o **vale da estranheza** (uncanny valley), caso o robô tenha um design muito próximo do humano?
-
-<details>
-<summary>📄</summary>
-
-O Rumo fica próximo do polo **minimalista** do espectro, com leve antropomorfismo (olhos, "cabeça" que gira), sem rosto detalhado nem fala emocional complexa — parecido com o Keepon citado na aula de Design. Justificativa: um design fortemente humano geraria expectativa de conversa fluida, que o robô não tem; pouco antropomorfismo, por outro lado, dificultaria que visitantes se sintam à vontade para abordá-lo. Por ficar longe do polo humano, o risco de vale da estranheza é baixo.
-
-</details>
-
-### Padrões de design
-
-> 💡
-> Identifique **2 padrões de design** (design patterns) aplicáveis ao seu projeto e explique como eles se **combinam**.
-
-<details>
-<summary>📄</summary>
-
-**"Apresentação inicial"** (o robô se apresenta brevemente antes de perguntar o destino) + **"em movimento junto"** (anda ao lado/à frente do grupo, ajustando o ritmo ao visitante mais lento) — combinados, formam o padrão composto de "robô guia turístico".
-
-</details>
-
-### Valores e ética
-
-> 💡
-> - Aplicando o **Value-Sensitive Design (VSD)** — a tecnologia deve se adaptar às necessidades humanas, não o contrário — identifique **1 a 2 valores** em jogo no seu projeto (privacidade, autonomia, segurança, inclusão, etc.).
-> - Identifique **1 risco ético** do seu robô e como o grupo pretende mitigá-lo.
-
-<details>
-<summary>📄</summary>
-
-**Valores:** acessibilidade (o robô deve ajustar a velocidade para visitantes com mobilidade reduzida) e privacidade (não deve gravar ou reconhecer rostos sem consentimento).
-
-**Risco ético:** o robô poderia, sem querer, direcionar mais visitantes para cursos "badalados", reduzindo a visibilidade de cursos menos procurados. **Mitigação:** o menu de destinos sempre mostra todos os cursos na mesma ordem e tamanho, sem personalização por popularidade.
-
-</details>
-
-### Protótipo no papel
-
-> 💡
-> Modele o seu robô com desenhos de formas primitivas (caixas, cilindros, esferas): forma, tamanho, rosto/olhos, partes móveis, tela. É o protótipo mais barato e rápido — lembre-se do lema "**teste cedo, teste sempre**".
->
-
-<details>
-<summary>📄</summary>
-
- Corpo afunilado sobre uma base omnidirecional (três rodas onidirecionais, em arranjo triangular); "cabeça" arredondada com dois olhos, uma antena/sensor no topo; tela na parte de cima do torso, com o nome do robô; sem braços — apenas um anel de luz na base para sinalizar status. Altura total ≈1,55 m; diâmetro da base ≈0,90 m.
-
-<img alt="Esboço do robô Rumo - V1'" src="rumo_esboco_v1.png" height="380"/>
-<img alt="Esboço do robô Rumo - V2'" src="rumo_esboco_v2.png" height="380"/>
-<img alt="Esboço do robô Rumo - V3'" src="rumo_esboco_v3.png" height="380"/>
-
-</details>
-
-## Ações do robô
-
-> 💡
-> Para cada ação:
-> - Descreva a ação.
-> - Determine os pré-requisitos para que a ação aconteça
-> - Determine o que se espera que seja modificado no ambiente quando a ação é finalizada
-
-<details>
-<summary>📄</summary>
-
-**Guiar até o destino** — pré-requisito: destino escolhido no menu e caminho livre conhecido no mapa do dia. Ao finalizar: o visitante está fisicamente no laboratório e o robô retorna à posição de espera no saguão.
-
-**Dar informação rápida** — pré-requisito: pergunta reconhecida dentro do conjunto de perguntas frequentes cadastradas. Ao finalizar: a resposta foi falada e também exibida na tela.
-
-</details>
-
-## Interações do robô
-
-### Espacial
-
-> 💡
-> - Descreva **onde** o robô se posiciona em relação ao usuário (distância e orientação do corpo), usando as **zonas de proxêmica** (Hall) e as **F-formations**.
-> - Como o robô **inicia** a interação (direção de aproximação) e como **sinaliza** para onde vai?
-> - Para cada interação espacial:
->   - Descreva a interação.
->   - Determine os pré-requisitos para que a interação aconteça.
->   - Determine a resposta emocional esperada do usuário quando a interação é finalizada.
-> - O que o robô faz ao encontrar pessoas **paradas, em conversa ou em grupo**, e ao passar por elas num corredor (sem cruzar entre pessoas conversando)?
-> - Proponha **um ajuste** desse comportamento espacial para um contexto de uso diferente do principal.
-
-<details>
-<summary>📄</summary>
-
-- **Posicionamento:** aborda o grupo a uma distância social (2–3 m), sempre pela frente, nunca por trás.
-- **Início da aproximação:** aproxima-se em diagonal (nunca em linha reta "contra" a pessoa), reduzindo a velocidade a 1,5 m de distância.
-- **Sinalização de destino:** gira a "cabeça" na direção do laboratório antes de começar a andar.
-- **Grupos e corredores:** ao encontrar duas pessoas conversando, contorna por trás delas, sem passar entre as duas; para grupos maiores, aguarda uma abertura natural na formação.
-- **Ajuste de contexto:** em dias normais de aula (sem evento), o robô aumenta a distância de abordagem, já que há menos ruído social e mais espaço livre no saguão.
-
-</details>
-
-### Verbal
-
-> 💡
-> - A interação verbal do robô será **restrita** (comandos, FSM) ou **aberta** (LLM/chatbot)? Justifique a escolha.
-> - Para cada interação verbal:
->   - Descreva a interação.
->   - Determine os pré-requisitos para que a interação aconteça.
->   - Determine a resposta emocional esperada do usuário quando a interação é finalizada.
-> - Como o robô lida com o **timing** das respostas (silêncio, marcadores conversacionais como "uh-huh")?
-> - Que tipo de voz (TTS) o robô usa, e por que ela **combina** com a aparência e o propósito dele?
-> - Identifique **uma limitação** do reconhecimento de fala (ruído, sotaque, vocabulário) que afetaria o seu cenário de uso, e como mitigá-la.
-
-<details>
-<summary>📄</summary>
-
-**Restrita** — usa uma árvore de diálogo (FSM) com um conjunto fechado de destinos e perguntas frequentes, pois o saguão é ruidoso e o vocabulário esperado é previsível; mais confiável do que abrir para um LLM.
-
-**Timing:** ao processar um pedido, o robô emite um "hum" sonoro curto e pisca os olhos em sequência, evitando silêncio constrangedor.
-
-**Voz:** TTS de tom jovem e neutro, volume ajustável ao ruído do saguão — combina com o porte pequeno do robô (uma voz grave soaria estranha).
-
-**Limitação do ASR:** o ruído do evento atrapalha o reconhecimento de nomes de professores e disciplinas. **Mitigação:** escolhas críticas (curso, laboratório) são feitas por toque na tela; o reconhecimento de fala só é usado para perguntas simples de sim/não.
-
-</details>
-
-### Não-verbal
-
-> 💡
-> - Escolha **dois canais** não verbais (olhar, gesto, toque, postura, ritmo, imitação) e descreva como o robô os usaria.
-> - Para cada interação não-verbal:
->   - Descreva a interação.
->   - Determine os pré-requisitos para que a interação aconteça.
->   - Determine a resposta emocional esperada do usuário quando a interação é finalizada.
-> - Explique como o robô **perceberia** as pistas não verbais correspondentes da pessoa.
-> - Descreva um caso em que a **falta de coordenação** entre fala e comportamento não verbal quebraria a interação.
-> - Proponha **uma pista não verbal exclusiva** do robô (sem equivalente humano direto) que ajudaria na comunicação.
-
-<details>
-<summary>📄</summary>
-
-**Canais escolhidos: olhar e postura.**
-- **Olhar:** os "olhos" de LED giram na direção de quem está falando com o robô e na direção da rota a seguir.
-- **Postura:** o corpo se inclina levemente para frente ao iniciar a aproximação (convite) e se afasta/gira de lado ao encerrar a interação (despedida).
-
-**Percepção:** uma câmera de profundidade detecta se a pessoa está olhando para o robô (atenção) e se está parada olhando ao redor (sinal de estar perdida).
-
-**Falta de coordenação:** se o robô disser "vamos ao laboratório de robótica" mas girar para o lado errado, o grupo hesita e para de segui-lo — a confiança se quebra.
-
-**Pista exclusiva do robô:** um anel de luz na base pisca em verde quando o robô está confiante do caminho e em amarelo quando está recalculando a rota — sem equivalente humano direto, mas comunica incerteza de forma clara.
-
-</details>
-
-## Emoção
-
-> 💡
-> - Escolha um **modelo de emoção** (categorias básicas de Ekman, modelo OCC ou modelo dimensional — Russell ou PAD) e justifique a escolha para o seu caso de uso.
-> - Descreva **como** o robô perceberia o estado emocional do usuário, e por quais canais (rosto, voz, postura, outro).
-> - Defina **quando** o robô deve mimetizar a emoção da pessoa e **quando não deve** (lembre-se da exceção da raiva — retribuir raiva raramente ajuda a resolver o conflito).
-> - Identifique um risco de **gerenciamento de expectativas**: se o robô parece emocionalmente responsivo, que outras capacidades sociais o usuário passa a esperar dele? O robô consegue cumprir essa expectativa?
-
-<details>
-<summary>📄</summary>
-
-**Modelo:** categorias básicas de Ekman (feliz, surpreso, neutro) — simples o suficiente para expressar por luzes e tom de voz, sem exigir um rosto detalhado.
-
-**Percepção:** o robô reconhece tom de voz alterado (frustração) pelo microfone e expressões faciais básicas pela câmera, para saber se o visitante está confuso ou satisfeito.
-
-**Mimetismo:** mimetiza entusiasmo — se o visitante se anima ao ver o laboratório de robótica, o robô "sorri" com as luzes — mas **nunca** mimetiza a impaciência de um visitante apressado; nesse caso mantém tom calmo e oferece um caminho mais curto.
-
-**Risco de expectativa:** se o robô demonstra "empolgação", visitantes podem esperar que ele converse sobre assuntos abertos (ex.: "e as notas de corte?"). O robô precisa deixar claro, de forma simpática, quando um assunto está fora do seu escopo.
-
-</details>
-
----                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-[^1]: Fonte: Adaptado de <https://hazeshift.com.br/mapa-de-empatia/>
+ZenBot: O robô instrutor de ioga
+
+Nov 11, 2026
+Trabalho de Interação Humano-Robô (IHR) apresentado ao Centro Universitário FEI, como parte dos requisitos para aprovação na disciplina de Interação Humano-Robô (CCR230) do curso de Engenharia de Robôs, orientado pelo Prof. Dr. Fagner de Assis Moura Pimentel.
+
+Componentes do grupo
+Sofia Linheira Romeiro	11.120.371-7
+Matheus Marcondes Pereira Rufino	11.122.028-1
+Gabriel Ueno Vertamatti	11.122.159-4
+Dereck Nasser Garcia Santos 	11.122.
+	
+Resumo
+O ZenBot é um robô humanoide instrutor de ioga que conduz aulas em grupo para idosos de casas de repouso, com foco na Saudação ao Sol (Surya Namaskar), a sequência clássica do ioga. Sua forma humanoide foi projetada para executar as posturas de maneira correta e servir de modelo visual para os alunos.
+Uma câmera no tronco observa a turma e estima a postura de cada aluno. Com alto-falantes e microfones, o robô conduz a respiração, dá instruções e indica correções de forma gentil e individual. O objetivo é oferecer um momento diário de calma e exercício moderado, sem substituir os cuidadores da instituição.
+
+Introdução:
+Em uma sociedade cada vez mais agitada e ansiosa, é importante reservar momentos de pausa para relaxar e praticar exercícios. Para idosos em casas de repouso, a atividade física regular ajuda a manter mobilidade, equilíbrio e bem-estar emocional, mas essas instituições costumam ter poucos profissionais e equipes sobrecarregadas, o que limita a oferta de aulas diárias.
+O ZenBot ministra uma aula guiada da Saudação ao Sol, adaptada para idosos (com opções na cadeira), demonstrando cada postura com o próprio corpo, conduzindo a respiração pela voz e observando os alunos pela câmera para sugerir correções.
+Objetivo em uma frase: conduzir aulas diárias, seguras e acolhedoras de ioga para grupos de idosos, demonstrando e corrigindo as posturas da Saudação ao Sol.
+Experiência proporcionada: calma e tranquilidade. Voz suave, movimentos lentos, nenhuma cobrança por desempenho e elogios frequentes, para que o aluno saia da aula relaxado e com vontade de voltar no dia seguinte.
+Público-alvo e stakeholders
+Público-alvo: idosos (60 anos ou mais) residentes ou frequentadores de casas de repouso e instituições de longa permanência, com mobilidade preservada ou levemente reduzida, que buscam exercício moderado e relaxamento em grupo.
+Tipo	Quem	Relação com o robô
+Primário	Funcionários do estabelecimento (cuidadores, enfermeiros, educador físico)	Configuram o robô, agendam as aulas, acompanham a turma e respondem a alertas
+Secundário	Alunos idosos	Observam os movimentos do robô, repetem as posturas e ajustam a pose quando o robô indica
+Terciário	Donos da casa de repouso, familiares dos idosos, médicos e fisioterapeutas	Não interagem diretamente, mas são afetados pela receptividade, pela segurança e pelo custo do robô
+
+Personas:
+Persona	Perfil	Contexto social, econômico e cultural	Relação com o ZenBot
+-> Primária: Cláudio, 46 anos	Funcionário (cuidador) de uma casa de repouso, acorda cedo	Classe média baixa, ensino médio completo, usa smartphone no dia a dia, rotina corrida de plantões	Configura o robô pelo tablet para iniciar a aula no horário definido e acompanha a turma
+-> Secundária: Dona Maria Cláudia, 67 anos	Moradora da casa de repouso	Aposentada, pouca familiaridade com tecnologia, católica, gosta de conversar e de música	Reúne-se com as amigas após o café da manhã para a sessão de ioga, buscando tranquilidade e exercício moderado
+-> Terciária: Ademar, 47 anos	Dono da casa de repouso	Empresário de pequeno porte, preocupado com custos e com a reputação da casa	Está animado (e um pouco ansioso) para saber a opinião dos hóspedes sobre o robô
+O que o robô precisa saber sobre os usuários antes de iniciar:
+•	Lista de alunos inscritos e seus nomes (para cumprimentar e chamar pelo nome).
+•	Restrições físicas informadas pela equipe de saúde (ex.: não pode se abaixar, faz a aula na cadeira, usa andador).
+•	Nível de experiência e histórico das aulas anteriores.
+•	Preferências de volume de voz e de música ambiente.
+•	Quem é o funcionário responsável pela sessão, para enviar alertas.
+
+Mapas de empatia:
+
+* Cláudio (persona primária)
+
+ Quadrante	Descrição
+-> Vê:	O salão de atividades da casa de repouso, os idosos chegando devagar, o tablet de configuração e o robô em espera
+-> Ouve	Conversas dos idosos, pedidos de colegas, o rádio da recepção, a voz do robô iniciando a aula
+-> Diz e faz:	Liga e agenda o robô, ajuda os idosos a se posicionarem nos tapetes ou cadeiras, observa a aula de longe
+-> Pensa e sente:	“Espero que seja fácil de configurar”; receio de que o robô substitua seu trabalho; alívio por ganhar tempo para outras tarefas
+-> Dores:	Pouco tempo, muitas tarefas simultâneas, medo de quedas dos idosos, interfaces complicadas
+-> Ganhos:	Aulas que começam sozinhas no horário, alertas claros em caso de problema, relatório simples de participação
+
+* Dona Maria Cláudia (persona secundária)
+
+Quadrante	Descrição
+-> Vê	As amigas da clínica, os tapetes e cadeiras, o robô à frente da turma demonstrando as posturas
+-> Ouve	A voz calma do robô, música suave, risadas e comentários das amigas
+-> Diz e faz	Repete os movimentos, pergunta “assim está certo?”, comenta com as amigas, faz pausas quando cansa
+-> Diz e faz	Repete os movimentos, pergunta “assim está certo?”, comenta com as amigas, faz pausas quando cansa
+-> Diz e faz	Repete os movimentos, pergunta “assim está certo?”, comenta com as amigas, faz pausas quando cansa
+-> Diz e faz	Repete os movimentos, pergunta “assim está certo?”, comenta com as amigas, faz pausas quando cansa
+-> Pensa e sente	Curiosidade e um pouco de desconfiança; quer um robô simpático, que não assuste nem pareça gente demais; medo de errar na frente das outras
+-> Dores	Dificuldade de equilíbrio, dores nas articulações, audição reduzida, vergonha de ser corrigida em público
+-> Ganhos	Momento de tranquilidade, exercício leve, socialização com as amigas, sensação de progresso e de ser elogiada
+
+Contexto de uso:
+
+O ZenBot atua no salão de atividades de uma casa de repouso: um ambiente interno, plano e iluminado, com cerca de 6 a 10 alunos dispostos em semicírculo sobre tapetes ou cadeiras, logo após o café da manhã. Um funcionário permanece no local durante a aula.
+Contexto social, econômico e cultural: os alunos são idosos, muitos com pouca familiaridade com tecnologia, e a aula é também um momento de socialização. A instituição tem equipe reduzida e orçamento limitado, por isso o robô precisa ser simples de operar e de manter. Culturalmente, o ioga é visto como prática de relaxamento e saúde; a linguagem deve ser acolhedora, em português brasileiro, evitando termos técnicos em sânscrito sem tradução.
+O que o robô precisa saber sobre o ambiente antes de iniciar:
+•	Mapa do salão e posição de cada tapete ou cadeira.
+•	Iluminação suficiente para a câmera e nível de ruído ambiente.
+•	Obstáculos e rotas livres (andadores, cadeiras de rodas, móveis).
+•	Localização da base de recarga e do funcionário responsável.
+•	Horário e duração previstos da aula.
+
+Jornada do usuário
+Narrativa: é terça-feira, 8h30. Cláudio liga o ZenBot e confirma a aula das 9h. Dona Maria Cláudia termina o café e segue com as amigas para o salão, onde o robô as espera de braços abertos. A aula transcorre em clima calmo e, ao final, todas saem relaxadas e combinando de voltar no dia seguinte.
+1.	Preparação (início). Cláudio seleciona a turma no tablet e posiciona as cadeiras. O robô faz uma autoverificação e se desloca até a frente do salão. Espacial: o robô se posiciona no centro do semicírculo, a cerca de 3 m dos alunos.
+2.	Acolhida. Os alunos chegam; o robô vira a cabeça para cada um e cumprimenta pelo nome. Verbal: “Bom dia, dona Maria Cláudia! Que bom te ver.” Não-verbal: aceno com a mão e LEDs do rosto em tom quente.
+3.	Aquecimento e respiração. O robô explica a aula e conduz três respirações profundas. Não-verbal: o peito do robô acende e apaga no ritmo da respiração.
+4.	Saudação ao Sol (evolução). O robô demonstra cada uma das posturas, devagar, espelhando o movimento para facilitar a imitação, e anuncia a próxima. A câmera compara a pose de cada aluno com a pose de referência.
+5.	Correções. Se um aluno está fora da pose, o robô olha para ele e dá uma dica curta e positiva. Verbal: “Maria Cláudia, tente levar os braços um pouco mais para cima. Isso, ótimo!” Se alguém parece cansado, sugere a versão na cadeira.
+6.	Situações de exceção. Se a câmera detecta alguém sentado no chão de forma inesperada ou imóvel, o robô pausa a aula, pergunta se está tudo bem e alerta Cláudio pelo tablet.
+7.	Relaxamento final (término). O robô diminui o volume, conduz um minuto de relaxamento e agradece a presença de todos. Espacial: afasta-se um passo, sinalizando o fim.
+8.	Pós-aula. O robô envia a Cláudio um resumo (presença e ocorrências) e retorna à base de recarga, contornando os alunos que ainda conversam.
+
+Análise de concorrência:
+
+Já existem robôs sociais que conduzem exercícios para idosos, mas nenhum focado em ioga com correção individual de postura em grupo. Também há soluções não robóticas que atendem o mesmo mercado de ioga guiado.
+Plataforma	Tipo	Pontos positivos	Pontos negativos
+Zora (NAO com software Zorabots)
+
+Similar: humanoide de 57 cm usado em casas de repouso para conduzir exercícios e jogos	Boa aceitação e engajamento dos idosos; demonstra movimentos com o corpo; operado por equipe não técnica	Pequeno demais para ser visto por um grupo; bateria limitada; problemas de reconhecimento de fala; custo alto (até US$ 24 mil)
+
+Pepper (SoftBank) em projetos como PHAROS
+Similar: humanoide de 1,20 m que guia e avalia exercícios por câmera	Tamanho adequado para grupos; tela no peito; reconhece emoções; pesquisas mostram boa aceitação	Não tem pernas (base com rodas), então não demonstra posturas de ioga em pé ou no chão; produção interrompida pela SoftBank em 2021
+YogiFi Smart Mat
+Diferente: tapete de ioga com sensores de pressão e app com IA	Correção de postura em tempo real; sem câmera (mais privacidade); baixo custo por usuário	Uso individual; depende de celular ou TV; não tem presença física nem interação social, pouco atrativo para idosos
+Mais interessante para a equipe: o Zora, por já ter sido validado em casas de repouso por dois anos e mostrar que idosos aceitam um humanoide instrutor. O ZenBot combina essa presença física com a correção de postura do YogiFi e um corpo maior, com pernas, capaz de demonstrar a Saudação ao Sol.
+Design do robô
+Forma, função e affordances
+A forma humanoide casa com a função: para ensinar posturas, o robô precisa de braços, pernas e tronco articulados que sirvam de modelo. Cada parte sinaliza uma capacidade:
+•	Olhos (câmera e LEDs): indicam que o robô enxerga os alunos.
+•	Braços e pernas articulados: indicam que ele demonstra movimentos, não que pega objetos (mãos simplificadas, sem garra).
+•	Faixa de LED no peito: indica o ritmo da respiração.
+•	Tablet do funcionário: concentra a configuração, para que os idosos não precisem tocar em telas.
+Acessibilidade: voz clara, em volume ajustável e com fala pausada para quem tem perda auditiva; legendas e ícones grandes no tablet; todas as posturas com versão adaptada na cadeira; movimentos lentos e previsíveis.
+Prometer menos e entregar mais: o robô se apresenta como “instrutor de ioga”, não como fisioterapeuta ou companheiro. Ele não promete conversar sobre qualquer assunto nem diagnosticar dores; assim, quando lembra o nome do aluno ou elogia uma melhora, supera a expectativa.
+Grau de antropomorfismo
+No espectro máquina ↔ humano, o ZenBot fica no ponto humanoide estilizado (cerca de 60%): tem corpo com proporções humanas, necessário para demonstrar as posturas, mas rosto simplificado (dois olhos de LED e uma tela de expressões), sem pele, cabelo ou boca realista.
+Esse padrão (semelhante ao NAO e ao Pepper) é o mais aceito em casas de repouso, pois é simpático sem parecer uma pessoa. Para evitar o vale da estranheza, o grupo evita traços realistas, usa acabamento em plástico branco e cores suaves, mantém o rosto “de desenho” e garante que voz e movimentos sejam coerentes com essa aparência.
+Padrões de design
+1.	Demonstrar e imitar (instrutor-modelo): o robô executa a postura e o aluno a reproduz, como em uma aula com professor humano.
+2.	Feedback corretivo positivo: após observar, o robô dá uma dica curta e termina com um reforço (“isso, ótimo!”).
+Os dois se combinam em um ciclo: demonstrar → observar → corrigir com gentileza → elogiar → próxima postura. A demonstração dá o modelo e o feedback fecha o ciclo de aprendizagem sem constranger o aluno.
+Valores e ética
+Seguindo o Value-Sensitive Design, o ZenBot se adapta aos idosos, e não o contrário. Dois valores guiam o projeto:
+•	Segurança física: nenhuma postura deve gerar risco de queda ou lesão. O robô só propõe posturas liberadas pela equipe de saúde para cada aluno, oferece sempre a versão na cadeira, nunca toca nos alunos e pausa a aula ao detectar qualquer situação anormal.
+•	Privacidade e dignidade: a câmera é usada apenas para estimar o esqueleto (pontos das articulações), sem gravar nem transmitir vídeo; os dados ficam no robô e só o resumo de presença vai para a equipe. Correções são feitas de forma discreta e positiva, sem expor quem errou.
+Risco ético: a instituição usar o robô para substituir o contato humano e reduzir a equipe, aumentando o isolamento dos idosos. Mitigação: o robô só inicia a aula com um funcionário presente e cadastrado na sessão, é apresentado como ferramenta de apoio ao cuidador e incentiva a conversa entre os próprios alunos ao fim da aula.
+Protótipo no papel
+ 
+protótipo no papel · 9 partes
+
+O corpo é montado com esfera (cabeça), caixas (tronco, quadril e pés) e cilindros (braços e pernas), com cerca de 1,30 m de altura: alto o bastante para ser visto por toda a turma sentada, sem intimidar. Não há tela no robô; a configuração fica no tablet do funcionário.
+
+Ações do robô
+
+Ação	Descrição	Pré-requisitos	Mudança no ambiente ao final
+Iniciar sessão	Sai da base, faz autoverificação e vai até a frente do salão	Aula agendada, bateria acima de 50%, funcionário presente	Robô posicionado e pronto; turma avisada de que a aula vai começar
+Cumprimentar alunos	Identifica cada aluno que chega e cumprimenta pelo nome	Lista da turma carregada, aluno dentro do campo de visão	Aluno acolhido e presença registrada
+Conduzir respiração	Orienta inspiração e expiração com voz e luz no peito	Alunos posicionados	Turma calma e sincronizada
+Demonstrar postura	Executa cada postura da Saudação ao Sol de forma lenta e espelhada	Espaço livre de 1 m ao redor do robô, equilíbrio verificado	Alunos com a referência visual da postura
+Avaliar postura	Compara o esqueleto estimado de cada aluno com a pose de referência	Iluminação adequada, aluno visível	Lista de alunos que precisam de ajuste
+Corrigir postura	Olha para o aluno e dá uma dica curta e positiva	Desvio detectado acima do limite por mais de 3 s	Aluno ajusta a pose ou passa à versão adaptada
+Pausar e alertar	Interrompe a aula e notifica o funcionário	Queda, imobilidade ou pedido de ajuda detectado	Funcionário a caminho; turma em espera segura
+Encerrar e recarregar	Faz o relaxamento final, envia o resumo e volta à base	Fim da sequência ou do tempo da aula	Resumo enviado, robô recarregando, salão livre
+Interações do robô
+
+Espacial
+
+Durante a aula, o ZenBot fica na zona social de Hall (cerca de 2,5 a 3 m) dos alunos, de frente para a turma, no centro de um semicírculo. Isso forma uma F-formation em “U” (ou semicírculo), em que todos compartilham o mesmo espaço de atenção: o robô. Para uma correção individual, ele apenas gira o tronco e a cabeça em direção ao aluno, sem entrar na zona pessoal (abaixo de 1,2 m).
+Início da interação: o robô entra no salão pela frente, nunca por trás dos alunos, em velocidade baixa (cerca de 0,3 m/s). Antes de se mover, olha para o destino e acende uma seta luminosa no peito indicando a direção.
+Interação	Descrição	Pré-requisitos	Resposta emocional esperada
+Posicionar-se diante da turma	Para no centro do semicírculo, a cerca de 3 m	Mapa do salão e alunos sentados ou em pé	Sensação de aula organizada e de segurança
+Orientar-se para um aluno	Gira o tronco e a cabeça para quem recebe a dica	Aluno identificado pela câmera	Sentir-se visto e acompanhado
+Afastar-se ao final	Dá um passo atrás e se curva levemente	Fim do relaxamento	Fechamento tranquilo, sem pressa
+Pessoas paradas, em conversa ou em grupo: o robô reduz a velocidade, mantém pelo menos 1,2 m de distância e contorna o grupo por fora, nunca passando entre pessoas que conversam (o espaço interno da F-formation). Em corredores, segue pela direita e para se não houver espaço, aguardando a passagem.
+Ajuste para outro contexto: em uma aula individual domiciliar, o robô pode ficar a cerca de 1,5 m (início da zona social), lado a lado com o aluno em vez de frente a frente (formação em “L”), para que a pessoa o imite olhando para o mesmo lado.
+
+Verbal
+
+A interação verbal será restrita (máquina de estados com comandos). A aula tem um roteiro fixo e a segurança é prioridade: um chatbot aberto poderia dar conselhos de saúde indevidos ou responder de forma imprevisível. Comandos simples (“pausa”, “repete”, “mais devagar”, “estou cansada”, “ajuda”) cobrem as necessidades da aula.
+Interação	Descrição	Pré-requisitos	Resposta emocional esperada
+Saudação	“Bom dia, dona Maria Cláudia! Vamos começar?”	Aluno reconhecido	Acolhimento e proximidade
+Instrução de postura	Anuncia a postura e conduz a respiração	Turma posicionada	Calma e confiança
+Correção	Dica curta, nominal e positiva	Desvio de postura detectado	Motivação, sem constrangimento
+Resposta a comando	“Claro, vamos mais devagar” ao ouvir “mais devagar”	Comando reconhecido com confiança	Sensação de controle
+Encerramento	Agradece e convida para a próxima aula	Fim da sequência	Satisfação e vontade de voltar
+Timing: o robô espera de 1 a 2 s após o aluno parar de falar antes de responder (idosos falam com mais pausas). Usa marcadores curtos como “isso”, “muito bem” e “hum-hum” durante as posturas, e respeita silêncios longos nos momentos de relaxamento.
+Voz (TTS): feminina ou neutra, grave-média, lenta (cerca de 20% mais devagar que o padrão) e suave, como a de um professor de ioga. Combina com a aparência amigável e com o propósito de acalmar; evita tons infantis, que soariam condescendentes.
+Limitação do reconhecimento de fala: a voz de idosos costuma ser mais baixa e trêmula, e o salão tem música e conversas paralelas. Mitigação: vocabulário pequeno e fixo, microfone direcional, pausar a música ao detectar fala, confirmar comandos importantes (“Você quer pausar?”) e oferecer gestos alternativos, como levantar a mão para pedir pausa.
+
+Não-verbal
+
+Canais escolhidos: olhar e gesto/postura (imitação).
+Interação	Descrição	Pré-requisitos	Resposta emocional esperada
+Olhar dirigido	Olha para o aluno antes de corrigi-lo e alterna o olhar pela turma durante a aula	Posição dos rostos conhecida pela câmera	Sentir-se incluído e atendido
+Demonstração espelhada	Executa a postura como em um espelho (levanta o braço esquerdo quando pede o direito)	Espaço livre e equilíbrio verificado	Facilidade em imitar, menos confusão
+Aceno e reverência	Acena ao cumprimentar e faz uma leve reverência ao encerrar	Início ou fim da aula	Cordialidade e respeito
+Percepção das pistas da pessoa: a câmera estima a direção do rosto (para saber se o aluno está olhando para o robô) e o esqueleto corporal (para saber a postura, se a mão está levantada ou se a pessoa sentou).
+Falha de coordenação: se o robô diz “levante os braços” enquanto ainda os abaixa, ou diz “Maria Cláudia, ótimo!” olhando para outra aluna, a turma se confunde, imita o movimento errado e perde a confiança no instrutor.
+Pista exclusiva do robô: uma faixa de LED no peito que acende devagar na inspiração e apaga na expiração, funcionando como um metrônomo visual da respiração. Durante a correção, um ponto de luz no braço do robô indica qual parte do corpo deve ser ajustada.
+
+Emoção
+
+Modelo escolhido: dimensional de Russell (valência × ativação). O objetivo da aula é levar os alunos para o quadrante de valência positiva e baixa ativação (calma, relaxamento). Um modelo contínuo permite medir esse deslocamento ao longo da aula, algo que as categorias discretas de Ekman (alegria, raiva, medo…) não capturam bem.
+Percepção do estado emocional:
+•	Rosto: expressões de dor, cansaço ou sorriso detectadas pela câmera.
+•	Voz: volume, ritmo e tom ao falar com o robô (ex.: voz tensa ou ofegante).
+•	Postura: ombros contraídos, movimentos bruscos ou parar no meio da sequência indicam desconforto ou alta ativação.
+Quando mimetizar: o robô espelha emoções positivas e de baixa ativação (sorriso, calma, satisfação ao completar uma postura), reforçando o clima da aula.
+Quando não mimetizar: diante de frustração, raiva ou ansiedade, o robô não retribui. Ele baixa o tom de voz, desacelera, valida o sentimento (“Tudo bem, vamos no seu ritmo”) e oferece a versão mais leve da postura, puxando a ativação para baixo.
+Risco de expectativas: se o robô parece emocionalmente responsivo, os idosos podem esperar que ele converse sobre a vida, perceba tristeza profunda ou seja um amigo. O ZenBot não consegue cumprir isso, pois tem diálogo restrito à aula. Para gerenciar a expectativa, ele deixa claro seu papel (“Sou seu instrutor de ioga”), encaminha assuntos fora da aula ao funcionário e avisa a equipe quando percebe sinais persistentes de tristeza.
+
+Referências
+•	Two-Year Use of Care Robot Zora in Dutch Nursing Homes: An Evaluation Study (Healthcare, 2019)
+•	Employing Socially Assistive Robots in Elderly Care (arXiv, 2023)
+•	Meet Zora, the robot caregiver (Toronto Star, 2018)
+•	PHAROS: interactive robot system for physical exercise for the elderly (Sensors, 2018)
+•	Robot-Assisted Group Exercise Program for Sarcopenia with Pepper (Univ. de Gênova)
+•	YogiFi smart yoga mat — CES 2020 Innovation Award (iMore)
+•	HALL, E. T. The Hidden Dimension. 1966 (proxêmica).
+•	RUSSELL, J. A. A circumplex model of affect. Journal of Personality and Social Psychology, 1980.
+•	FRIEDMAN, B.; KAHN, P.; BORNIN
